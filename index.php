@@ -27,27 +27,26 @@ $result = mysqli_query($koneksi, $query);
     rel="stylesheet" />
 </head>
 
-<body class=" bg-no-repeat bg-cover bg-fixed" style="background-image: url(&quot;./assets/backgroundindex.jpg&quot;)">
+<body class=" bg-no-repeat bg-center bg-cover bg-fixed" style="background-image: url(&quot;./assets/background.jpg&quot;)">
   <nav
-    class="flex justify-between fixed top-4 left-0 right-0 z-100 w-[99%] mx-auto rounded-xl shadow-xl py-5 px-8 bg-cover bg-center border- border-neutral-900"
-    style="background-image: url('./assets/navbg.jpg')">
+    class="flex justify-between fixed z-100 w-full mx-auto rounded-b-lg shadow-xl py-4 px-15 bg-cover bg-center border- border-neutral-900"
+    style="background-image: url('assets/background2.jpg')">
     <img src="assets/mega1.png" alt="" class="absolute right-44 -top-9 w-21 h-15 scale-150 z-100">
     <img src="assets/mega1.png" alt="" class="absolute left-44 top-13 w-21 h-15 scale-150 z-100">
     <img src="assets/mega3.png" alt="" class="absolute -left-2 -top-12 w-21 h-15 scale-160 z-100">
     <img src="assets/mega2.png" alt="" class="absolute -right-8 top-15 w-21 h-15 scale-130 z-100">
-  
- <div>
-        <a href="index.php"
-          class="font-bold font-[fredoka] text-3xl text-yellow-950">
+  <!-- Div Logo -->
+  <div class="w-70">
+          <a href="index.php"
+            class="font-bold font-[fredoka] text-3xl text-yellow-950">
 
-          Resep Kita
+            Resep Kita
 
-        </a>
-      </div>
-
-    <div class="flex items-center gap-7  ">
-
-        <a href="index.php"
+          </a>
+        </div>
+        <!-- start div menu -->
+<div class= "w-160 flex justify-evenly items-center ">
+  <a href="index.php"
           class="font-bold font-[Fredoka] text-yellow-950 hover:text-yellow-700 transition">
           Beranda
         </a>
@@ -63,9 +62,17 @@ $result = mysqli_query($koneksi, $query);
           Tambah Resep
         </a>
 
-        <a href="search.php"
+       
+</div>
+      <!-- start Div navigasi -->
+    <div class="w-90 flex items-center justify-end-safe gap-10 ">
+
+
+         <a href="search.php"
           class="font-bold font-[Fredoka] text-yellow-950 hover:text-yellow-700 transition">
-          Cari Resep
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-6">
+                <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+        </svg>
         </a>
           <span class="font-[Fredoka] text-sm text-yellow-950">
             Halo,
@@ -73,14 +80,11 @@ $result = mysqli_query($koneksi, $query);
           </span>
 
           <a href="logout.php"
-            class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition">
+            class="bg-orange-900 hover:bg-orange-900 text-white px-4 py-2 rounded-full transition">
 
             Logout
 
           </a>
-
-
-
     </div>
 
   </nav>
@@ -93,9 +97,10 @@ $result = mysqli_query($koneksi, $query);
 
   <div class="relative h-screen  top-4 shadow-xl mx-auto w-full"
     style="background-image: url(&quot;./assets/navbg.jpg&quot;)" ;>
-    <img src="assets/pembatas.png" alt="" class="absolute left-80 top-6 w-100 h-80 scale-500">
+    <!-- asset -->
+  
     <img src="assets/wayang.png" alt="" class=" absolute -left-9 top-3 w-21 h-32 scale-340 rotate-7">
-    <img src="assets/pembatas.png" alt="" class="absolute left-80 -bottom-100 w-100 h-80 scale-500">
+
     <section class="w-full min-h-screen flex items-center justify-center px-10 gap-90">
       <div class="max-w-7xl w-full flex items-center">
         <div class="w-[35%] relative">
@@ -200,6 +205,10 @@ $result = mysqli_query($koneksi, $query);
 
   </section>
     </div>
+    <svg height="210" width="400" xmlns="http://www.w3.org/2000/svg">
+  <path d="M150 5 L75 200 L225 200 Z"
+  style="fill:none;stroke:green;stroke-width:3" />
+</svg>
 </body>
 
 </html>
