@@ -21,13 +21,13 @@ $result = mysqli_query($koneksi, $query);
   <title>Index-ResepKita</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Fredoka:wght@300..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body class=" bg-no-repeat bg-center bg-cover bg-fixed" style="background-image: url(&quot;./assets/background.jpg&quot;)">
   <nav
-    class="flex justify-between fixed z-100 w-full mx-auto rounded-b-lg shadow-xl py-4 px-15 bg-cover bg-center border- border-neutral-900"
+    class="flex justify-between fixed z-100 w-full mx-auto rounded- shadow-xl py-6 px-8 bg-cover bg-center border-b border-neutral-900 "
     style="background-image: url('assets/background2.jpg')">
     <img src="assets/mega1.png" alt="" class="absolute right-44 -top-9 w-21 h-15 scale-150 z-100">
     <img src="assets/mega1.png" alt="" class="absolute left-44 top-13 w-21 h-15 scale-150 z-100">
@@ -43,45 +43,42 @@ $result = mysqli_query($koneksi, $query);
           </a>
         </div>
         <!-- start div menu -->
-<div class= "w-160 flex justify-evenly items-center ">
+<div class= "w-160 flex justify-evenly items-center font-[Merryweather] text-xl">
   <a href="index.php"
-          class="font-bold font-[Fredoka] text-yellow-950 hover:text-yellow-700 transition">
+          class="font-bold text-yellow-950 hover:text-yellow-700 transition">
           Beranda
         </a>
 
         <a href="kategori.php"
-          class="font-bold font-[Fredoka] text-yellow-950 hover:text-yellow-700 transition">
+          class="font-bold text-yellow-950 hover:text-yellow-700 transition">
           Kategori
         </a>
 
 
         <a href="create.php"
-          class="font-bold font-[Fredoka] text-yellow-950 hover:text-yellow-700 transition">
+          class="font-bold text-yellow-950 hover:text-yellow-700 transition">
           Tambah Resep
         </a>
 
        
 </div>
       <!-- start Div navigasi -->
-    <div class="w-90 flex items-center justify-end-safe gap-10 ">
+    <div class="w-90 flex items-center justify-end-safe gap-10 font">
 
 
          <a href="search.php"
-          class="font-bold font-[Fredoka] text-yellow-950 hover:text-yellow-700 transition">
+          class="font-bold text-yellow-950 hover:text-yellow-700 transition">
           <svg xmlns="http://www.w3.org/2000/svg" class="size-6">
                 <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
         </svg>
         </a>
-          <span class="font-[Fredoka] text-sm text-yellow-950">
+          <span class="font-[Merryweather] text-lg text-yellow-950">
             Halo,
             <?= htmlspecialchars($_SESSION['username']); ?>
           </span>
-
-          <a href="logout.php"
-            class="bg-orange-900 hover:bg-orange-900 text-white px-4 py-2 rounded-full transition">
+          <a href="logout.php" class="bg-orange-900  text-white px-4 py-2 rounded-full hover:scale-110 hover:bg-yellow-900 font-[Merryweather] duration-300">
 
             Logout
-
           </a>
     </div>
 
@@ -95,23 +92,24 @@ $result = mysqli_query($koneksi, $query);
 
   <div class="relative h-screen  top-4 shadow-xl mx-auto w-full"
     style="background-image: url(&quot;./assets/navbg.jpg&quot;)" ;>
-<<<<<<< HEAD
+
     <!-- asset -->
   
     <img src="assets/wayang.png" alt="" class=" absolute -left-9 top-3 w-21 h-32 scale-340 rotate-7">
 
-=======
-    <img src="assets/pembatas.png" alt="" class="absolute left-80 top-6 w-86 h-80 scale-500">
+   
     <img src="assets/wayang.png" alt="" class=" absolute -left-9 top-3 w-21 h-32 scale-340 rotate-7">
-    <img src="assets/pembatas.png" alt="" class="absolute left-80 -bottom-100 w-86 h-80 scale-500">
->>>>>>> 8e7f0dcebe3c44d869ac63f71f40419c418c95a8
+  
+
     <section class="w-full min-h-screen flex items-center justify-center px-10 gap-90">
       <div class="max-w-7xl w-full flex items-center">
         <div class="w-[35%] relative">
-          <h1 class="text-[80px] font-black font-[playfair-display] uppercase text-black">
-            Nikmati <br />
-            Cita Rasa <br />
-            Nusantara
+          <h1 class="text-[80px] font-black font-[Merryweather] uppercase text-black tracking-tight leading-tight ">
+            Nikmati 
+
+           <text class="pl-10 "> Cita Rasa </text>
+            
+            <text class="text-yellow-700 italic ">Nusantara</text>
           </h1>
           <p class="mt-8 text-xl text-black font-[fredoka] leading-relaxed">
             Temukan berbagai resep masakan Indonesia yang lezat, mudah dibuat,
@@ -119,19 +117,19 @@ $result = mysqli_query($koneksi, $query);
           </p>
 
           <!-- BUTTON -->
-          <button class="mt-10 bg-black text-white px-10 py-4 rounded-full text-lg hover:scale-105 font-[fredoka] duration-300">
+          <button class="mt-10 outline-3 outline-yellow-700 text-yellow-900 px-10 py-4 rounded-full text-lg hover:scale-105 hover:bg-yellow-700 hover:text-white font-[fredoka] duration-300">
             LIHAT RESEP
           </button>
         </div>
 
         <div class="w-[65%] h-[550px] overflow-hidden rounded-[40px] ml-20">
-          <img src="./assets/backgroundindex.jpg" alt="Makanan Indonesia" class="w-full h-full object-cover" />
+          <img src="./assets/backgroundindex.jpg" alt="Makanan Indonesia" class="w-full h-full "/>
         </div>
       </div>
     </section>
 
 
-  <section class="rounded-xl h-screen mt-20 top-4 shadow-xl mx-auto px-10"
+  <section class=" h-screen top-4 shadow-xl mx-auto px-10"
     style="background-image: url(&quot;./assets/navbg.jpg&quot;)" ;>
 
     <h1 class="text-3xl font-[playfair-display] font-bold mb-8 text-yellow-950">
