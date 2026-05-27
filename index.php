@@ -26,9 +26,9 @@ $result = mysqli_query($koneksi, $query);
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class=" bg-no-repeat bg-center bg-cover bg-fixed" style="background-image: url()">
+<body class=" bg-[length:300px_auto] bg-center bng-repeat bg-fixed" style="background-image: url('assets/card.png')">
   <nav
-    class="flex justify-between fixed z-100 w-full mx-auto rounded- shadow-xl py-5 px-8 bg-cover bg-center border-b border-neutral-900 "
+    class="flex justify-between fixed z-100 w-full mx-auto rounded- shadow-xl py-5 px-8 border-b border-neutral-900 bg-repeat bg-[length:300px_auto]"
     style="background-image: url('assets/navbg.jpg')">
     <img src="assets/mega1.png" alt="" class="absolute right-44 -top-9 w-21 h-15 scale-150 z-100">
     <img src="assets/mega1.png" alt="" class="absolute left-44 top-13 w-21 h-15 scale-150 z-100">
@@ -77,7 +77,7 @@ $result = mysqli_query($koneksi, $query);
             Halo,
             <?= htmlspecialchars($_SESSION['username']); ?>
           </span>
-          <a href="logout.php" class="bg-orange-900  text-white px-4 py-2 rounded-full hover:scale-110 hover:bg-yellow-900 font-[Merryweather] duration-300">
+          <a href="logout.php" class="bg-orange-900 text-white px-4 py-2 rounded-full hover:scale-110 hover:bg-yellow-900 font-[Merryweather] duration-300">
 
             Logout
           </a>
@@ -87,13 +87,14 @@ $result = mysqli_query($koneksi, $query);
 
   <!-- POSTER istilahnya -->
 
-  <div class="relative h-screen  top-4 shadow-xl mx-auto w-full"
-    style="background-image: url(&quot;./assets/navbg.jpg&quot;)" ;>
+  <div class="relative h-screen top-4 border-b border-yellow-900 mx-auto w-full"
+    style="background-image: url('assets/card.png')";>
 
     <!-- asset -->
   
-    <img src="assets/wayang.png" alt="" class=" absolute -left-9 top-3 w-21 h-32 scale-340 rotate-7">
-    <img src="assets/wayang.png" alt="" class=" absolute -left-9 top-3 w-21 h-32 scale-340 rotate-7">
+    <img src="assets/wayang.png" alt="" class=" absolute -left-9 top-80 w-21 h-32 scale-340 rotate-7">
+    <img src="assets/pawayangan.png" alt="" class=" absolute -right-2 top-90 w-21 h-45 scale-250 -rotate-10">
+    
 
     <section class="w-full min-h-screen flex items-center justify-center px-10 gap-90">
       <div class="max-w-7xl w-full flex items-center">
@@ -121,15 +122,15 @@ $result = mysqli_query($koneksi, $query);
           <img src="assets/makanan3.jpg" alt="makanan3">
           <img src="assets/makanan4.jpg" alt="makanan4">
           </figure>
-        
+        </section>
       </div>
-    </section>
+    
 <!-- batas -->
 
-  <section class=" h-screen top-4 shadow-xl mx-auto px-10 w-full"
-    style="background-image: url(&quot;./assets/navbg.jpg&quot;)" ;>
+</div>
+  <section class=" h-170 shadow-xl mx-auto px-10 w-full py-9 bg-repeat bg-[length:300px_auto]" style="background-image: url('assets/navbg.jpg')">
 
-    <h1 class="text-3xl font-[playfair-display] font-bold mb-8 text-yellow-950">
+    <h1 class="text-4xl shadow-xl font-[Merryweather] font-bold mb-8 text-[#D4AF37] text-center uppercase italic bg-[#2D1B12] rounded-xl" >
       Resep Terbaru
     </h1>
     <!-- GRID CARD -->
@@ -138,7 +139,7 @@ $result = mysqli_query($koneksi, $query);
       <?php while ($data = mysqli_fetch_assoc($result)) : ?>
 
         <!-- CARD -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition bg-bottom" style="background-image: url('assets/card.png')">
 
           <!-- GAMBAR -->
           <img
@@ -159,10 +160,7 @@ $result = mysqli_query($koneksi, $query);
 
               <span>Oleh :</span>
 
-              <img
-                src="./assets/profil.png"
-                alt="Profil"
-                class="w-4 h-4 object-contain">
+              <img src="./assets/profil.png" alt="Profil" class="w-4 h-4 object-contain">
 
               <span class="font-semibold">
                 <?= htmlspecialchars($data['username']); ?>
@@ -186,7 +184,7 @@ $result = mysqli_query($koneksi, $query);
             </a>
 
             <a href="delete.php?id=<?= $data['id_resep']; ?>"
-              class="inline-block font-[fredoka] bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded"
+              class="inline-block font-[fredoka] bg-orange-900 hover:bg-yellow-700 text-white px-4 py-2 rounded"
               onclick="return confirm('Hapus resep ini?')">
 
               Hapus
@@ -202,8 +200,48 @@ $result = mysqli_query($koneksi, $query);
     </div>
 
   </section>
+  <!-- footer -->
+  <section class="w-full h-130 shadow-xl py-7 px-20 bg-[length:300px_auto] "  style="background-image: url('assets/background.png')">
+    <footer class="relative h-full bg-[#2D1B12] rounded-xl overflow-hidden" >
+      <div class="absolute inset-0 bg-repeat bg-[length:300px_auto] opacity-10 z-0" style="background-image: url('assets/navbg.jpg')"></div>
+       <!-- hiasan -->
+         <div class="absolute -top-5 0 flex justify-center pt-6 relative z-10">
+          <img class="absolute w-30 " src="assets/mega1.png" alt="hiasan">
+         </div>
+         <!-- isi -->
+          <div class="grid grid-cols-3 mx-auto h-full px-30 gap-10 py-20 z-10">
+            <!-- nama -->
+            <div class="">
+              <h1 class="font-[Merryweather] text-[#D4AF37] font-bold text-4xl">Resep Kita</h1>
+              <p class="pt-3 text-olive-100">Temukan berbagai resep makanan Indonesia yang lezat, mudah dibuat, dan cocok untuk hidangan keluarga setiap hari</p>
+            </div>
+            <!-- navugasi -->
+            <div>
+              <h1 class="font-[Merryweather] text-[#D4AF37] font-bold text-2xl">Navigasi</h1>
+            <div class="grid grid-cols-1 gap-1 pt-3">
+              <a href="index.php" class="text-olive-100 hover:text-olive-600">Beranda</a>
+              <a href="create.php" class="text-olive-100">Tambah Resep</a>
+              <a href="create.php" class="text-olive-100">Kategori</a>    
+              </div>
+            </div>
+            <!-- credit -->
+           <div >
+              <h1 class="font-[Merryweather] text-[#D4AF37] font-bold text-2xl">Pembuat</h1>
+            <div class="grid grid-cols-1 gap-1 pt-3">
+              <p class="text-olive-100">Elo</p>
+              <p class="text-olive-100">Reva</p>    
+              </div>
+            </div>
+             <div class="absolute inset-0 top-70 z-10 flex items-center justify-center gap-5">
+        <div class="w-32 h-[1px] bg-[#D4AF37]"></div>
+        <img src="assets/mega2.png" class="w-20 opacity-70">
+        <div class="w-32 h-[1px] bg-[#D4AF37]"></div>
+
     </div>
-  
+          </div>
+    </footer>
+  </div>
+  </section>
 </body>
 
 </html>
