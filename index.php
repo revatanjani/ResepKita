@@ -19,16 +19,17 @@ $result = mysqli_query($koneksi, $query);
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Index-ResepKita</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class=" bg-no-repeat bg-center bg-cover bg-fixed" style="background-image: url(&quot;./assets/background.jpg&quot;)">
+<body class=" bg-no-repeat bg-center bg-cover bg-fixed" style="background-image: url()">
   <nav
-    class="flex justify-between fixed z-100 w-full mx-auto rounded- shadow-xl py-6 px-8 bg-cover bg-center border-b border-neutral-900 "
-    style="background-image: url('assets/background2.jpg')">
+    class="flex justify-between fixed z-100 w-full mx-auto rounded- shadow-xl py-5 px-8 bg-cover bg-center border-b border-neutral-900 "
+    style="background-image: url('assets/navbg.jpg')">
     <img src="assets/mega1.png" alt="" class="absolute right-44 -top-9 w-21 h-15 scale-150 z-100">
     <img src="assets/mega1.png" alt="" class="absolute left-44 top-13 w-21 h-15 scale-150 z-100">
     <img src="assets/mega3.png" alt="" class="absolute -left-2 -top-12 w-21 h-15 scale-160 z-100">
@@ -84,10 +85,6 @@ $result = mysqli_query($koneksi, $query);
 
   </nav>
 
-<!-- Transparant -->
-  <div class="h-screen">
-
-  </div>
   <!-- POSTER istilahnya -->
 
   <div class="relative h-screen  top-4 shadow-xl mx-auto w-full"
@@ -96,10 +93,7 @@ $result = mysqli_query($koneksi, $query);
     <!-- asset -->
   
     <img src="assets/wayang.png" alt="" class=" absolute -left-9 top-3 w-21 h-32 scale-340 rotate-7">
-
-   
     <img src="assets/wayang.png" alt="" class=" absolute -left-9 top-3 w-21 h-32 scale-340 rotate-7">
-  
 
     <section class="w-full min-h-screen flex items-center justify-center px-10 gap-90">
       <div class="max-w-7xl w-full flex items-center">
@@ -122,20 +116,22 @@ $result = mysqli_query($koneksi, $query);
           </button>
         </div>
 
-        <div class="w-[65%] h-[550px] overflow-hidden rounded-[40px] ml-20">
-          <img src="./assets/backgroundindex.jpg" alt="Makanan Indonesia" class="w-full h-full "/>
-        </div>
+          <figure class="w-[65%] h-[550px] overflow-hidden rounded-[40px] ml-20 hover-gallery">
+          <img src="assets/makanan1.jpg" alt="Makanan1" class="w-full h-full ">
+          <img src="assets/makanan3.jpg" alt="makanan3">
+          <img src="assets/makanan4.jpg" alt="makanan4">
+          </figure>
+        
       </div>
     </section>
+<!-- batas -->
 
-
-  <section class=" h-screen top-4 shadow-xl mx-auto px-10"
+  <section class=" h-screen top-4 shadow-xl mx-auto px-10 w-full"
     style="background-image: url(&quot;./assets/navbg.jpg&quot;)" ;>
 
     <h1 class="text-3xl font-[playfair-display] font-bold mb-8 text-yellow-950">
       Resep Terbaru
     </h1>
-
     <!-- GRID CARD -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -207,10 +203,7 @@ $result = mysqli_query($koneksi, $query);
 
   </section>
     </div>
-    <svg height="210" width="400" xmlns="http://www.w3.org/2000/svg">
-  <path d="M150 5 L75 200 L225 200 Z"
-  style="fill:none;stroke:green;stroke-width:3" />
-</svg>
+  
 </body>
 
 </html>
