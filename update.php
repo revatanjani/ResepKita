@@ -1,32 +1,35 @@
 <?php
 session_start();
-include 'koneksi.php';
+include 'koneksi.php'; 
 
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
+if (!isset($_SESSION['username'])) { 
+    header("Location: login.php"); 
+    exit(); 
+}
+
+$id_resep = $_GET['id']; 
+
+// Ambil data resep
+$query = "SELECT * FROM resep WHERE id_resep = ?"; 
+$stmt = $koneksi->prepare($query); 
+$stmt->bind_param("i", $id_resep); 
+$stmt->execute(); 
+
+$result = $stmt->get_result(); 
+$data = $result->fetch_assoc(); 
+
+// JIKA DATA TIDAK ADA ATAU (ROLE-NYA BUKAN ADMIN DAN BUKAN PEMILIK RESEP)
+if (!$data || ($_SESSION['ROLE'] != 'admin' && $data['id'] != $_SESSION['id'])) {
+    echo "<script>alert('Anda tidak memiliki akses ke halaman ini!'); window.location='index.php';</script>";
     exit();
 }
 
-
-$id_resep = $_GET['id'];
-
-
-$query = "SELECT * FROM resep WHERE id_resep = ?";
-$stmt = $koneksi->prepare($query);
-$stmt->bind_param("i", $id_resep);
-$stmt->execute();
-
-$result = $stmt->get_result();
-$data = $result->fetch_assoc();
-
-
-if (isset($_POST['update'])) {
-
-    $judul = htmlspecialchars($_POST['judul']);
+if (isset($_POST['update'])) { 
+    $judul = htmlspecialchars($_POST['judul']); 
     $deskripsi = htmlspecialchars($_POST['deskripsi']);
-    $kategori = $_POST['kategori_daerah'];
-    $bahan = htmlspecialchars($_POST['bahan']);
-    $langkah = htmlspecialchars($_POST['langkah']);
+    $kategori = $_POST['kategori_daerah']; 
+    $bahan = htmlspecialchars($_POST['bahan']); 
+    $langkah = htmlspecialchars($_POST['langkah']); 
 
 
     if ($_FILES['foto']['name'] != "") {
