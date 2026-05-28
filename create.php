@@ -88,8 +88,8 @@ if (isset($_POST['simpan'])) {
 
 
   <nav
-    class="flex justify-between z-100 w-full shadow-xl rounded-xl py-5 px-8 bg-cover bg-center border- border-neutral-900"
-    style="background-image: url('./assets/navbg.jpg')">
+   class="flex justify-between  z-100 w-full mx-auto rounded- shadow-xl py-5 px-8 border-b border-neutral-900 bg-repeat bg-[length:300px_auto]"
+    style="background-image: url('assets/navbg.jpg')">
     <img src="assets/mega1.png" alt="" class="absolute right-27 -top-6 w-17 h-12 scale-150 z-100">
     <img src="assets/mega1.png" alt="" class="absolute left-37 top-11 w-17 h-12 scale-150 z-100">
     <img src="assets/mega3.png" alt="" class="absolute -left-3 -top-6 w-17 h-12 scale-160 z-100">
@@ -112,7 +112,7 @@ if (isset($_POST['simpan'])) {
           </span>
 
           <a href="logout.php"
-            class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition">
+            class="bg-orange-900 text-white px-4 py-2 rounded-full hover:scale-110 hover:bg-yellow-900 font-[Merryweather] duration-300">
 
             Logout
 
