@@ -207,7 +207,7 @@ $result = mysqli_query($koneksi, $query);
           <h1 class="font-[Merryweather] text-[#D4AF37] font-bold text-2xl">Created By</h1>
           <div class="grid grid-cols-1 gap-1 pt-3">
             <p class="text-amber-100/80">@elopresilberfa_</p>
-            <p class="text-amber-100/80">Reva</p>    
+            <p class="text-amber-100/80">@revatanjani</p>    
           </div>
         </div>
       </div>
