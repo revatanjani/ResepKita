@@ -50,11 +50,6 @@ $result = mysqli_query($koneksi, $query);
           Beranda
         </a>
 
-        <a href="kategori.php"
-          class="font-bold text-yellow-950 hover:text-yellow-700 transition">
-          Kategori
-        </a>
-
 
         <a href="create.php"
           class="font-bold text-yellow-950 hover:text-yellow-700 transition">
