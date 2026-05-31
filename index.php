@@ -108,7 +108,8 @@ $result = mysqli_query($koneksi, $query);
 
           <!-- BUTTON -->
           <button class="mt-10 outline-3 outline-yellow-700 text-yellow-900 px-10 py-4 rounded-full text-lg hover:scale-105 hover:bg-yellow-700 hover:text-white font-[fredoka] duration-300">
-            LIHAT RESEP
+          <a href="search.php">LIHAT RESEP</a>  
+          
           </button>
         </div>
 
